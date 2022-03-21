@@ -1,1 +1,1 @@
-{ "arrowParens": "avoid" }
+{ "arrowParens": "avoid", "bracketSpacing": true, "trailingComma": "none" }
