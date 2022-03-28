@@ -7,6 +7,20 @@
     "moduleResolution": "node",
     "skipLibCheck": true,
     "noEmit": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "baseUrl": "./src",
+    "paths": {
+      "app": ["."],
+      "underscore": ["lodash"],
+      "assets": ["./assets/*"],
+      "components": ["./components/*", "./components/index.ts"],
+      "containers": ["./containers/*", "./containers/index.ts"],
+      "hooks": ["./hooks/*", "./hooks/index.ts"],
+      // "navigation": ["./navigation/*", "./navigation/index.ts"],
+      // "services": ["./services/*", "./services/index.ts"],
+      "themes": ["./themes", "./themes/index.ts"],
+      "utils": ["./utils/*", "./utils/index.ts"]
+    }
   }
 }
