@@ -9,7 +9,8 @@
     "web": "expo start --web",
     "eject": "expo eject",
     "format": "npx prettier --write .",
-    "checkFormat": "npx prettier --check"
+    "checkFormat": "npx prettier --check .",
+    "reset": "expo r -c"
   },
   "dependencies": {
     "@react-navigation/drawer": "^6.3.2",
@@ -26,9 +27,22 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
+    "@react-native-community/eslint-config": "^3.0.1",
     "@types/react": "~17.0.21",
     "@types/react-native": "~0.64.12",
-    "prettier": "2.5.1",
+    "@typescript-eslint/eslint-plugin": "^5.16.0",
+    "@typescript-eslint/parser": "^5.16.0",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "eslint": "^8.12.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^16.1.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "prettier": "^2.6.1",
     "typescript": "~4.3.5"
   },
   "private": true
