@@ -14,7 +14,7 @@ module.exports = function (api) {
             components: "./src/components",
             containers: "./src/containers",
             hooks: "./src/hooks",
-            // navigation: "./src/navigation",
+            navigation: "./src/navigation",
             // stores: "./src/stores",
             // services: "./src/services",
             themes: "./src/themes",
