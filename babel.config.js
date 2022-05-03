@@ -15,6 +15,7 @@ module.exports = function (api) {
             containers: "./src/containers",
             hooks: "./src/hooks",
             navigation: "./src/navigation",
+            redux: "./src/redux",
             // stores: "./src/stores",
             // services: "./src/services",
             themes: "./src/themes",
