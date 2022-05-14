@@ -17,7 +17,8 @@
       "components": ["./components/*", "./components/index.ts"],
       "containers": ["./containers/*", "./containers/index.ts"],
       "hooks": ["./hooks/*", "./hooks/index.ts"],
-      "navigation": ["./navigation/*", "./navigation/index.ts"],
+      "navigation": ["./navigation/*", "./navigation/index.tsx"],
+      "redux": ["./redux/*", "./redux/index.ts"],
       // "services": ["./services/*", "./services/index.ts"],
       "themes": ["./themes", "./themes/index.ts"],
       "utils": ["./utils/*", "./utils/index.ts"]
