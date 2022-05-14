@@ -23,15 +23,23 @@ const TodoItem: React.FC<Props> = props => {
       minPointers={1}
       maxPointers={1}
       onHandlerStateChange={(event: any) => {
-        console.log("event", event.nativeEvent);
+        console.log("event", event.nativeEvent.state);
         if (event.nativeEvent.state === 5) {
-          if (event.nativeEvent.translationX < -100) {
+          if (event.nativeEvent.translationX < -200) {
             Animated.timing(animatedTodoValue, {
               toValue: -200,
               duration: 200,
               useNativeDriver: true,
-            }).start(() => {
-              onDelete && onDelete();
+            }).start(({ finished }) => {
+              // if finished,
+              if (finished) {
+                onDelete && onDelete();
+                Animated.timing(animatedTodoValue, {
+                  toValue: 0,
+                  duration: 0,
+                  useNativeDriver: true,
+                }).start();
+              }
             });
           } else {
             Animated.timing(animatedTodoValue, {
@@ -65,9 +73,7 @@ const TodoItem: React.FC<Props> = props => {
           },
         ]}
       >
-        <Text style={{ fontSize: Spacings.normal, color: Colors.primary }}>
-          {todo}
-        </Text>
+        {props.children}
       </Animated.View>
     </PanGestureHandler>
   );
