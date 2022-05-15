@@ -7,7 +7,7 @@ import {
   Animated,
 } from "react-native";
 import { Colors, Spacings } from "themes";
-import { TodoItem, Swipeable } from "components";
+import { Swipeable } from "components";
 
 interface HomeScreenProps {
   navigation: any;
@@ -25,18 +25,6 @@ const HomeScreen: React.FC<HomeScreenProps> = props => {
       setInput("");
     }
   };
-
-  const children = ({ todo, index }: { todo: string; index: number }) => (
-    <>
-      <TodoItem
-        key={"todo-" + index}
-        todo={todo}
-        onDelete={() => {
-          setTodos(todos.filter((_: any, i: number) => i !== index));
-        }}
-      />
-    </>
-  );
 
   return (
     <View
@@ -88,20 +76,15 @@ const HomeScreen: React.FC<HomeScreenProps> = props => {
           borderWidth: 1,
           borderColor: Colors.secondary,
           marginVertical: Spacings.large,
+          overflow: "hidden",
         }}
       >
         {todos.map((todo: any, index: number) => (
-          <TodoItem
-            key={"todo-" + index}
-            todo={todo}
-            onDelete={() => {
-              setTodos(todos.filter((_: any, i: number) => i !== index));
-            }}
-          >
+          <Swipeable>
             <Text style={{ fontSize: Spacings.normal, color: Colors.primary }}>
               {todo}
             </Text>
-          </TodoItem>
+          </Swipeable>
         ))}
       </View>
     </View>

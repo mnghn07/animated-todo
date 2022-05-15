@@ -1,5 +1,4 @@
-import TodoItem from "./TodoItem";
 import Ball from "./Ball";
-import Swipeable from "./Swipable";
+import Swipeable from "./Swipeable";
 
-export { TodoItem, Ball, Swipeable };
+export { Ball, Swipeable };
