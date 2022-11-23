@@ -1,6 +1,7 @@
 export const Colors = {
   primary: "#3b4c80",
   secondary: "#fff",
+  black: "#333",
 };
 
 export const Spacings = {

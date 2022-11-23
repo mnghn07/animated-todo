@@ -26,6 +26,12 @@ const HomeScreen: React.FC<HomeScreenProps> = props => {
     }
   };
 
+  const onDeleteTodo = (index: number) => {
+    const newTodos = [...todos];
+    newTodos.splice(index, 1);
+    setTodos(newTodos);
+  };
+
   return (
     <View
       style={{
@@ -80,7 +86,10 @@ const HomeScreen: React.FC<HomeScreenProps> = props => {
         }}
       >
         {todos.map((todo: any, index: number) => (
-          <Swipeable>
+          <Swipeable
+            key={"todo" + todo}
+            onSwipeRight={() => onDeleteTodo(index)}
+          >
             <Text style={{ fontSize: Spacings.normal, color: Colors.primary }}>
               {todo}
             </Text>
